@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowOld.InTenYearSlider"
+             Title="InTenYearSlider"
+              Background="Pink">
+
+        <Grid RowDefinitions="*,*" Margin="10">
+
+            <Label TextColor="Red" Text="" Grid.Row="0" x:Name="lblResult" />
+
+            <VerticalStackLayout  Spacing="10" Grid.Row="1" VerticalOptions="End" >
+                <Label Text="Your Name:"/>
+                <Entry x:Name="name"/>
+
+                <Label Text="What is your age:" />
+            <Grid ColumnDefinitions="*,50">
+                <Slider Grid.Column="0" Minimum="0" Maximum="120" ValueChanged="Slide_ValueChanged" x:Name="sliderAge" DragCompleted="sliderAge_DragCompleted"/>
+                <Label  x:Name="Eage" Grid.Column="1" Background="Green"/>
+
+
+            </Grid>
+                
+               
+        </VerticalStackLayout>
+
+        </Grid>
+</ContentPage>
